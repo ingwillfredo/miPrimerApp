@@ -1,1 +1,17 @@
-<p>Aqui van los empleados</p>
+<p>Nombre empleado: {{nombre}}</p>
+<p>Apellido empleado: {{apellido}}</p>
+<label>Digite su edad </label>
+<input type="text" placeholder="edad" #edad (keyup)="guardaedad(edad.value)">
+<br> 
+<input type="button" value="Guardar" [disabled] = "habilitarBoton">
+<p>Edad empleado: {{edad.value}} {{edadg < 18 ? "Menor de edad": "Mayor de edad"}}</p>
+<p>Empresa empleado: {{empresa}}</p>
+<br> 
+{{mensaje}}
+<br> 
+Registrado: <input type="radio" value="si" name="nregistro" id="registro" [checked]="usuregistrado" (click)="setregistrousuario($event)">
+<br> 
+No Registrado: <input type="radio" value="no" name="nregistro" id="registro" (click)="setregistrousuario($event)">
+
+<br> 
+

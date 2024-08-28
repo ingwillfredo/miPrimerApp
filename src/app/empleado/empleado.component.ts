@@ -7,4 +7,33 @@ import { Component } from '@angular/core';
 })
 export class EmpleadoComponent {
 
+  nombre = "Will";
+  apellido = "Martin";
+  edadg = 0;
+  empresa = "Casa";
+  mensaje = "No hay nadie registrado";
+
+  guardaedad(value:String){
+    this.edadg = Number(value)
+  }
+
+  habilitarBoton = true;
+  usuregistrado = false;
+
+  getregistroUsuario(){
+    this.usuregistrado = false;
+  }
+
+  setregistrousuario(event:Event){
+    //alert("El usuario se registro")
+    //alert(event.target)
+    if((<HTMLInputElement>event.target).value == "si"){
+      this.mensaje = "Usuario registrado";
+    }
+    else{
+      this.mensaje = "No hay nadie registrado";
+    }
+  }
+
 }
+
