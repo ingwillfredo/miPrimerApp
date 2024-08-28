@@ -28,6 +28,7 @@ export class EmpleadoComponent {
     //alert("El usuario se registro")
     //alert(event.target)
     //prueba git
+    //prueba git 2
     if((<HTMLInputElement>event.target).value == "si"){
       this.mensaje = "Usuario registrado";
     }
