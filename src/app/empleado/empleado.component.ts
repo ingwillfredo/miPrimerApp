@@ -10,7 +10,7 @@ export class EmpleadoComponent {
   nombre = "Will";
   apellido = "Martin";
   edadg = 0;
-  empresa = "Casa";
+  empresa = "Google";
   mensaje = "No hay nadie registrado";
 
   guardaedad(value:String){
@@ -35,6 +35,10 @@ export class EmpleadoComponent {
     else{
       this.mensaje = "No hay nadie registrado";
     }
+  }
+
+  cambiaEmpresa(event:Event){
+    this.empresa = (<HTMLInputElement>event.target).value;
   }
 
 }

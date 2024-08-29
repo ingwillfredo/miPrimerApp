@@ -7,6 +7,8 @@
 <p>Edad empleado: {{edad.value}} {{edadg < 18 ? "Menor de edad": "Mayor de edad"}}</p>
 <p>Empresa empleado: {{empresa}}</p>
 <br> 
+Introduce la empresa: <input type="text" [(ngModel)]="empresa">
+<br> 
 {{mensaje}}
 <br> 
 Registrado: <input type="radio" value="si" name="nregistro" id="registro" [checked]="usuregistrado" (click)="setregistrousuario($event)">
